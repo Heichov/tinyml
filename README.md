@@ -55,12 +55,12 @@ With system-algorithm co-design, we can significantly improve the deep learning 
 
 Our **TinyEngine** inference engine could be a useful infrastructure for MCU-based AI applications. It significantly **improves the inference speed and reduces the memory usage** compared to existing libraries like [TF-Lite Micro](https://www.tensorflow.org/lite/microcontrollers), [CMSIS-NN](https://arxiv.org/abs/1801.06601), [MicroTVM](https://tvm.apache.org/2020/06/04/tinyml-how-tvm-is-taming-tiny), etc.
 
-- TinyNAS improves the **inference speed** by **1.5-3x**
+- TinyEngine improves the **inference speed** by **1.5-3x**
 
 ![teaser](assets/figures/latency.png)
 
 
-- TinyNAS reduces the **peak memory** by **2.7-4.8x**
+- TinyEngine reduces the **peak memory** by **2.7-4.8x**
 
 ![teaser](assets/figures/peak_mem.png)
 
@@ -150,11 +150,11 @@ We can further reduce the memory usage with lower precision (int4). Notice that 
 
 We provide the MCUNet models under different latency constraints. The models are designed to fit STM32F746 with 320kB SRAM and 1MB Flash.
 
-| Latency Limit | Model Stats.                                   | TF-Lite Stats.                                      | TinyEngine Stats.                                  | Top-1 Acc.                  | Top-5 Acc.                 | Link                                                         |
-| ------------- | ---------------------------------------------- | --------------------------------------------------- | -------------------------------------------------- | --------------------------- | -------------------------- | ------------------------------------------------------------ |
-| N/A           | MACs: 81.8M <br />Param: 0.74M<br />Act: 333kB | SRAM: 560kB<br />Flash:  1088kB<br />Latency: OOM   | SRAM: 293kB<br />Flash: 897kB<br />Latency: 1075ms | FP: 62.2%<br />int8:  61.8% | FP: 84.5%<br />int8: 84.2% | [json](assets/configs/mcunet-320kb-1mb_imagenet.json)<br />[ckpt](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-320kb-1mb_imagenet.pth)<br />[tflite](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-320kb-1mb_imagenet.tflite) |
-| 5FPS          | MACs: 12.8M <br />Param: 0.6M<br />Act: 90kB   | SRAM: TODOkB<br />Flash:  TODOkB<br />Latency: TODO | SRAM: 307kB<br />Flash: 992kB<br />Latency: 197ms  | FP: 51.5%<br />int8: 49.9%  | FP: 75.5%<br />int8: 74.1% | [json](assets/configs/mcunet-5fps_imagenet.json)<br />[ckpt](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-5fps_imagenet.pth)<br />[tflite](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-5fps_imagenet.tflite) |
-| 10FPS         | MACs: 6.4M <br />Param: 0.7M<br />Act: 45kB    | SRAM: TODOkB<br />Flash:  TODOkB<br />Latency: OOM  | SRAM: 266kB<br />Flash: 889kB<br />Latency: 92ms   | FP: 41.5%<br />int8: 40.4%  | FP: 66.3%<br />int8: 65.2% | [json](assets/configs/mcunet-10fps_imagenet.json)<br />[ckpt](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-10fps_imagenet.pth)<br />[tflite](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-10fps_imagenet.tflite) |
+| Latency<br />Limit | Model Stats.                                   | TF-Lite Stats.                                      | TinyEngine Stats.                                  | Top-1 Acc.                  | Top-5 Acc.                 | Link                                                         |
+| ------------------ | ---------------------------------------------- | --------------------------------------------------- | -------------------------------------------------- | --------------------------- | -------------------------- | ------------------------------------------------------------ |
+| N/A                | MACs: 81.8M <br />Param: 0.74M<br />Act: 333kB | SRAM: 560kB<br />Flash:  1088kB<br />Latency: OOM   | SRAM: 293kB<br />Flash: 897kB<br />Latency: 1075ms | FP: 62.2%<br />int8:  61.8% | FP: 84.5%<br />int8: 84.2% | [json](assets/configs/mcunet-320kb-1mb_imagenet.json)<br />[ckpt](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-320kb-1mb_imagenet.pth)<br />[tflite](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-320kb-1mb_imagenet.tflite) |
+| 5FPS               | MACs: 12.8M <br />Param: 0.6M<br />Act: 90kB   | SRAM: TODOkB<br />Flash:  TODOkB<br />Latency: TODO | SRAM: 107kB<br />Flash: 770kB<br />Latency: 197ms  | FP: 51.5%<br />int8: 49.9%  | FP: 75.5%<br />int8: 74.1% | [json](assets/configs/mcunet-5fps_imagenet.json)<br />[ckpt](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-5fps_imagenet.pth)<br />[tflite](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-5fps_imagenet.tflite) |
+| 10FPS              | MACs: 6.4M <br />Param: 0.7M<br />Act: 45kB    | SRAM: TODOkB<br />Flash:  TODOkB<br />Latency: OOM  | SRAM: 54kB<br />Flash: 889kB<br />Latency: 92ms    | FP: 41.5%<br />int8: 40.4%  | FP: 66.3%<br />int8: 65.2% | [json](assets/configs/mcunet-10fps_imagenet.json)<br />[ckpt](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-10fps_imagenet.pth)<br />[tflite](https://hanlab.mit.edu/projects/tinyml/mcunet/release/mcunet-10fps_imagenet.tflite) |
 
 
 
