@@ -11,7 +11,7 @@
 ## TinyML Projects
 | Projects                | Keywords | 
 |----------------------|:----------:|
-| [MCUNet](https://github.com/mit-han-lab/tinyml/tree/master/mcunet) | Efficient Inference, Microcontrollers) |
+| [MCUNet](https://github.com/mit-han-lab/tinyml/tree/master/mcunet) | Memory-efficient inference, System-algorithm co-design |
 | [TinyTL](https://github.com/mit-han-lab/tinyml/tree/master/tinytl) | On-device learning, Memory-efficient transfer learning |
 
 
