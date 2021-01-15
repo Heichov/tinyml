@@ -8,6 +8,13 @@
 [Analytics Insight](https://www.analyticsinsight.net/amalgamating-ml-and-iot-in-smart-home-devices/), 
 [Techable](https://techable.jp/archives/142462).
 
+## TinyML Projects
+| Projects                | Keywords | 
+|----------------------|:----------:|
+| [MCUNet](https://github.com/mit-han-lab/tinyml/tree/master/mcunet) | Efficient Inference, Microcontrollers) |
+| [TinyTL](https://github.com/mit-han-lab/tinyml/tree/master/tinytl) | On-device learning, Memory-efficient transfer learning |
+
+
 ## About TinyML
 Intelligent edge devices with rich sensors (e.g., billions of mobile phones and IoT devices) have been ubiquitous 
 in our daily lives. Combining artificial intelligence (AI) and these edge devices, 
@@ -25,13 +32,6 @@ to facilitate the giant market of edge AI and AIoT.
 <p align="center">
     <img src="https://hanlab.mit.edu/projects/tinyml/figures/background2.png" width="100%" />
 </p>
-
-## TinyML Projects
-| Projects                | Keywords | 
-|----------------------|:----------:|
-| [MCUNet](https://github.com/mit-han-lab/tinyml/tree/master/mcunet) | Efficient Inference, Microcontrollers) |
-| [TinyTL](https://github.com/mit-han-lab/tinyml/tree/master/tinytl) | On-device learning, Memory-efficient transfer learning |
-
 
 ## Demon
 [![Watch the video](https://hanlab.mit.edu/projects/tinyml/figures/mcunet_demo.png)](https://youtu.be/YvioBgtec4U)
