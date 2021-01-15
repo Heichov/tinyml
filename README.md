@@ -33,7 +33,7 @@ to facilitate the giant market of edge AI and AIoT.
     <img src="https://hanlab.mit.edu/projects/tinyml/figures/background2.png" width="100%" />
 </p>
 
-## Demon
+## Demo
 [![Watch the video](https://hanlab.mit.edu/projects/tinyml/figures/mcunet_demo.png)](https://youtu.be/YvioBgtec4U)
 
 ## Related Projects
